@@ -103,7 +103,7 @@ def train_val_datasets(data):
 
 # Create the datasets
 train_dataset, validation_dataset = train_val_datasets(data)
-print('Name: ANBUSELVAM A       Register Number: 212222240009')
+print('Name: Vasanth P      Register Number: 212222240113')
 print(f"There are {train_dataset.cardinality()} sentence-label pairs for training.\n")
 print(f"There are {validation_dataset.cardinality()} sentence-label pairs for validation.\n")
      
@@ -162,7 +162,7 @@ def fit_vectorizer(train_sentences, standardize_func):
 text_only_dataset = train_dataset.map(lambda text, label: text)
 vectorizer = fit_vectorizer(text_only_dataset, standardize_func)
 vocab_size = vectorizer.vocabulary_size()
-print('Name: ANBUSELVAM A      Register Number: 212222240009  ')
+print('Name: Vasanth P      Register Number: 212222240113  ')
 print(f"Vocabulary contains {vocab_size} words\n")
      
 ```
@@ -196,7 +196,7 @@ train_labels_only = train_dataset.map(lambda text, label: label)
 validation_labels_only = validation_dataset.map(lambda text, label: label)
 
 label_encoder = fit_label_encoder(train_labels_only,validation_labels_only)
-print('Name: ANBUSELVAM     Register Number: 212222240009Z    ')
+print('Name: ANBUSELVAM     Register Number: 212222240113Z    ')
 print(f'Unique labels: {label_encoder.get_vocabulary()}')
 ```
 
@@ -225,7 +225,7 @@ validation_proc_dataset = preprocess_dataset(validation_dataset, vectorizer, lab
 
 train_batch = next(train_proc_dataset.as_numpy_iterator())
 validation_batch = next(validation_proc_dataset.as_numpy_iterator())
-print('Name: ANBUSELVAM A    Register Number: 212222240009      ')
+print('Name: Vasanth P    Register Number: 212222240113      ')
 print(f"Shape of the train batch: {train_batch[0].shape}")
 print(f"Shape of the validation batch: {validation_batch[0].shape}")
 ```
@@ -288,7 +288,7 @@ def plot_graphs(history, metric):
     plt.ylabel(metric)
     plt.legend([metric, f'val_{metric}'])
     plt.show()
-print('Name: Anbuselvam A  Register Number: 212222240009 ')
+print('Name: Vasanth P  Register Number: 212222240113 ')
 plot_graphs(history, "accuracy")
 plot_graphs(history, "loss")
 ```
